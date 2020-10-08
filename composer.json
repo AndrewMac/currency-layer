@@ -1,8 +1,8 @@
 {
-    "name": "ournameismud/currency-layer",
+    "name": "spmcommercial/currency-layer",
     "description": "API integration with https://currencylayer.com/",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": [
         "craft",
         "cms",
@@ -10,15 +10,11 @@
         "craft-plugin",
         "currencylayer"
     ],
-    "support": {
-        "docs": "https://github.com/ournameismud/currency-layer/blob/master/README.md",
-        "issues": "https://github.com/ournameismud/currency-layer/issues"
-    },
     "license": "MIT",
     "authors": [
         {
-            "name": "cole007",
-            "homepage": "http://ournameismud.co.uk/"
+            "name": "spmcommercial",
+            "homepage": "https://spm-commercial.com/"
         }
     ],
     "require": {
@@ -26,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-          "ournameismud\\currencylayer\\": "src/"
+          "spmcommercial\\currencylayer\\": "src/"
         }
     },
     "extra": {
@@ -34,11 +30,11 @@
         "handle": "currency-layer",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/ournameismud/currency-layer/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/spm-commercial/currency-layer/master/CHANGELOG.md",
         "components": {
-            "api": "ournameismud\\currencylayer\\services\\Api",
-            "currency": "ournameismud\\currencylayer\\services\\Currency"
+            "api": "spmcommercial\\currencylayer\\services\\Api",
+            "currency": "spmcommercial\\currencylayer\\services\\Currency"
         },
-        "class": "ournameismud\\currencylayer\\CurrencyLayer"
+        "class": "spmcommercial\\currencylayer\\CurrencyLayer"
     }
 }
