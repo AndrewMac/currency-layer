@@ -4,13 +4,13 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\services;
+namespace spmcommercial\currencylayer\services;
 
-use ournameismud\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\CurrencyLayer;
 
 use Craft;
 use craft\base\Component;
@@ -31,15 +31,15 @@ class Currency extends Component
             $currencies = $CC->getPaymentCurrencies();
             foreach($currencies->getAllPaymentCurrencies() AS $currency) {
                 if (array_key_exists($currency->iso,$data)) {
-                    $currency->rate = $data[$currency->iso];                    
+                    $currency->rate = $data[$currency->iso];
                 }
                 $currency->primary = $currency == $currencyPrimary ? 1 : 0;
-                $currencies->savePaymentCurrency($currency); 
-            }            
+                $currencies->savePaymentCurrency($currency);
+            }
         }
-        
+
     }
-    
+
     public function parseValues($response)
     {
         $currencyPrimary = CurrencyLayer::$plugin->getSettings()->currencyPrimary;
@@ -83,7 +83,7 @@ class Currency extends Component
         $cache = CurrencyLayer::$plugin->getSettings()->apiCache;
         $cacheDuration = CurrencyLayer::$plugin->getSettings()->cacheDuration;
         $cacheDuration = !$cacheDuration ? 86400 : (int)$cacheDuration;
-        if ($cache):            
+        if ($cache):
             $cacheService = Craft::$app->getCache();
             $cacheKey = md5('currencyLayer::' . $url); //define key based on endpoint
             if (($data = $cacheService->get($cacheKey)) !== false):
@@ -94,8 +94,8 @@ class Currency extends Component
                 CurrencyLayer::getInstance()->currency->parseCommerce($response); //parse the response in commerce
                 $cacheService->set($cacheKey, $response, $cacheDuration);//set the cache object
                 $outcome['source'] = 'From Source (cached)';
-            endif;    
-            $outcome['cacheDuration'] = $cacheDuration;            
+            endif;
+            $outcome['cacheDuration'] = $cacheDuration;
         else:
             $response = CurrencyLayer::getInstance()->api->_curl($url);
             CurrencyLayer::getInstance()->currency->parseCommerce($response);

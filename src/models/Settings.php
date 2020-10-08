@@ -4,13 +4,13 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\models;
+namespace spmcommercial\currencylayer\models;
 
-use ournameismud\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\CurrencyLayer;
 
 use Craft;
 use craft\base\Model;

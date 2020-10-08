@@ -4,13 +4,13 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\controllers;
+namespace spmcommercial\currencylayer\controllers;
 
-use ournameismud\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\CurrencyLayer;
 
 use Craft;
 use craft\web\Controller;
@@ -41,7 +41,7 @@ class CurrencyController extends Controller
      */
     public function actionFetch()
     {
-        $request = Craft::$app->getRequest();  
+        $request = Craft::$app->getRequest();
         $type = $request->get('type');
         $type = empty($type) ? 'live' : $type;
         $response = CurrencyLayer::getInstance()->currency->fetch($request->get(), $type);

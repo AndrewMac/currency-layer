@@ -4,19 +4,19 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer;
+namespace spmcommercial\currencylayer;
 
-use ournameismud\currencylayer\fields\Currency as CurrencyField;
+use spmcommercial\currencylayer\fields\Currency as CurrencyField;
 
-use ournameismud\currencylayer\services\Api as ApiService;
-use ournameismud\currencylayer\services\Currency as CurrencyService;
-use ournameismud\currencylayer\variables\CurrencyLayerVariable;
-use ournameismud\currencylayer\models\Settings;
-use ournameismud\currencylayer\widgets\Currency as CurrencyWidget;
+use spmcommercial\currencylayer\services\Api as ApiService;
+use spmcommercial\currencylayer\services\Currency as CurrencyService;
+use spmcommercial\currencylayer\variables\CurrencyLayerVariable;
+use spmcommercial\currencylayer\models\Settings;
+use spmcommercial\currencylayer\widgets\Currency as CurrencyWidget;
 
 use Craft;
 use craft\commerce\Plugin as craftCommerce;
@@ -81,12 +81,12 @@ class CurrencyLayer extends Plugin
                 $event->types[] = CurrencyField::class;
             }
         );
-        
+
         // Detect Craft Commerce save event
         // if set as primary update currency layer currencyPrimary setting
         Event::on(
-            Controller::class, 
-            Controller::EVENT_BEFORE_ACTION, 
+            Controller::class,
+            Controller::EVENT_BEFORE_ACTION,
             function(ActionEvent $event) {
                 $request = Craft::$app->getRequest();
                 $action = $request->getParam('action');
@@ -95,7 +95,7 @@ class CurrencyLayer extends Plugin
                     $CC = craftCommerce::getInstance();
                     $iso = $request->getParam('iso');
                     $primary = $request->getParam('primary');
-                    if ($primary) $this->settings['currencyPrimary'] = $iso; 
+                    if ($primary) $this->settings['currencyPrimary'] = $iso;
                 }
             }
         );
@@ -153,7 +153,7 @@ class CurrencyLayer extends Plugin
         );
     }
     // use this to upate the primary Craft Commerce currency if currencyPrimary value is changed
-    public function afterSaveSettings() 
+    public function afterSaveSettings()
     {
         $settings = $this->getSettings();
         $currencyPrimary = $settings['currencyPrimary'];
@@ -177,7 +177,7 @@ class CurrencyLayer extends Plugin
     protected function createSettingsModel()
     {
         return new Settings();
-    }    
+    }
 
     /**
      * @inheritdoc

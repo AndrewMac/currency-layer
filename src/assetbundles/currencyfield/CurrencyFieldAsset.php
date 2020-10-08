@@ -4,11 +4,11 @@
  *
  * testplugin
  *
- * @link      ournameismud.co.uk
+ * @link      spm-commercial.com
  * @copyright Copyright (c) 2019 @cole007
  */
 
-namespace ournameismud\currencylayer\assetbundles\currencyfield;
+namespace spmcommercial\currencylayer\assetbundles\currencyfield;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -29,7 +29,7 @@ class CurrencyFieldAsset extends AssetBundle
      */
     public function init()
     {
-        $this->sourcePath = "@ournameismud/currencylayer/assetbundles/currencyfield/dist";
+        $this->sourcePath = "@spmcommercial/currencylayer/assetbundles/currencyfield/dist";
 
         $this->depends = [
             CpAsset::class,

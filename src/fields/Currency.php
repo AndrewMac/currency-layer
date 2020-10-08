@@ -4,14 +4,14 @@
  *
  * testplugin
  *
- * @link      ournameismud.co.uk
+ * @link      spm-commercial.com
  * @copyright Copyright (c) 2019 @cole007
  */
 
-namespace ournameismud\currencylayer\fields;
+namespace spmcommercial\currencylayer\fields;
 
-use ournameismud\currencylayer\CurrencyLayer;
-use ournameismud\currencylayer\assetbundles\currencyfield\CurrencyFieldAsset;
+use spmcommercial\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\assetbundles\currencyfield\CurrencyFieldAsset;
 
 use Craft;
 use craft\base\ElementInterface;

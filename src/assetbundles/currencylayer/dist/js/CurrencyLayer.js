@@ -5,14 +5,14 @@
  *
  * @author    cole007
  * @copyright Copyright (c) 2019 cole007
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @package   CurrencyLayer
  * @since     1.0.0
  */
 
 
 //  $( document ).ready(function() {
-//  	var targetWrapper = $('#settings-currencyPref-field'); 	
+//  	var targetWrapper = $('#settings-currencyPref-field');
 //  	var currencyPrimary = $('#settings-currencyPrimary').val();
 //  	$(targetWrapper).find('input[type=checkbox]').prop('disabled',false);
 //  	var target = $(targetWrapper).find('input[value='+currencyPrimary+']');

@@ -4,11 +4,11 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\assetbundles\currencylayer;
+namespace spmcommercial\currencylayer\assetbundles\currencylayer;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -29,7 +29,7 @@ class CurrencyLayerAsset extends AssetBundle
      */
     public function init()
     {
-        $this->sourcePath = "@ournameismud/currencylayer/assetbundles/currencylayer/dist";
+        $this->sourcePath = "@spmcommercial/currencylayer/assetbundles/currencylayer/dist";
 
         $this->depends = [
             CpAsset::class,

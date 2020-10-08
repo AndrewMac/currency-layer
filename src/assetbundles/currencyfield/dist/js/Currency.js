@@ -5,7 +5,7 @@
  *
  * @author    @cole007
  * @copyright Copyright (c) 2019 @cole007
- * @link      ournameismud.co.uk
+ * @link      spm-commercial.com
  * @package   CurrencyLayer
  * @since     1.0.0CurrencyLayerCurrency
  */

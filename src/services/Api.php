@@ -4,13 +4,13 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\services;
+namespace spmcommercial\currencylayer\services;
 
-use ournameismud\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\CurrencyLayer;
 
 use Craft;
 use craft\base\Component;
@@ -33,7 +33,7 @@ class Api extends Component
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $response = curl_exec($ch); 
+        $response = curl_exec($ch);
         curl_close($ch);
         return $response;
     }

@@ -4,13 +4,13 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\variables;
+namespace spmcommercial\currencylayer\variables;
 
-use ournameismud\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\CurrencyLayer;
 
 use Craft;
 use craft\commerce\Plugin as craftCommerce;
@@ -42,7 +42,7 @@ class CurrencyLayerVariable
             }
         } else {
             $currencyData = file_get_contents( __DIR__ . '/../currency.json');
-            $currencyData = json_decode($currencyData);            
+            $currencyData = json_decode($currencyData);
         }
         return (array)$currencyData;
     }

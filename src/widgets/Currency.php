@@ -4,14 +4,14 @@
  *
  * API integration with https://currencylayer.com/
  *
- * @link      http://ournameismud.co.uk/
+ * @link      http://spm-commercial.com/
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\widgets;
+namespace spmcommercial\currencylayer\widgets;
 
-use ournameismud\currencylayer\CurrencyLayer;
-use ournameismud\currencylayer\assetbundles\currencywidget\CurrencyWidgetAsset;
+use spmcommercial\currencylayer\CurrencyLayer;
+use spmcommercial\currencylayer\assetbundles\currencywidget\CurrencyWidgetAsset;
 
 use Craft;
 use craft\base\Widget;
@@ -50,7 +50,7 @@ class Currency extends Widget
      */
     public static function iconPath()
     {
-        return Craft::getAlias("@ournameismud/currencylayer/assetbundles/currencywidget/dist/img/Currency-icon.svg");
+        return Craft::getAlias("@spmcommercial/currencylayer/assetbundles/currencywidget/dist/img/Currency-icon.svg");
     }
 
     /**
