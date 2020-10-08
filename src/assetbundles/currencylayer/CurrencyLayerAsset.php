@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 cole007
  */
 
-namespace ournameismud\currencylayer\assetbundles\CurrencyLayer;
+namespace ournameismud\currencylayer\assetbundles\currencylayer;
 
 use Craft;
 use craft\web\AssetBundle;
