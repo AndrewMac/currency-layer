@@ -30,7 +30,7 @@
         "handle": "currency-layer",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/spm-commercial/currency-layer/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/spmcommercial/currency-layer/master/CHANGELOG.md",
         "components": {
             "api": "spmcommercial\\currencylayer\\services\\Api",
             "currency": "spmcommercial\\currencylayer\\services\\Currency"
